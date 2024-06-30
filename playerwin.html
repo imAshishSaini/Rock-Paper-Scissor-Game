@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score card</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <style>
+        .icon {
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        #player .icon {
+            top: 38vh;
+            left: 38vw;
+        }
+
+        #pc .icon {
+            top: 38vh;
+            left: 62vw;
+        }
+
+        .outter {
+            position: fixed;
+            top: 31.1vh;
+            left: 35vw;
+            height: 190px;
+            width: 190px;
+            border-radius: 50%;
+            background-color: #4be83d;
+        }
+
+        .middle {
+            position: fixed;
+            height: 160px;
+            width: 160px;
+            top: 33.4vh;
+            left: 36vw;
+            border-radius: 50%;
+            background-color: #38bc2c;
+        }
+
+        .inner {
+            position: fixed;
+            top: 35.7vh;
+            left: 37vw;
+            height: 130px;
+            width: 130px;
+            border-radius: 50%;
+            background-color: #2E9A25;
+        }
+
+        .rock {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            border: 7px solid #0074B6;
+            display: none;
+        }
+
+        .scissors {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            border: 7px solid #BD00FF;
+            display: none;
+        }
+
+        .paper {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            border: 7px solid #FFA943;
+            display: none;
+        }
+
+        #decision {
+            position: fixed;
+            top: 50vh;
+            left: 50vw;
+        }
+
+        #against {
+            position: fixed;
+            top: 55vh;
+            left: 50.6vw;
+        }
+
+        #playAgain {
+            top: 65vh;
+            left: 49vw;
+        }
+
+        #nextBtn {
+            width: 119px;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 20px;
+            letter-spacing: 0.1em;
+            position: fixed;
+            cursor: pointer;
+            bottom: 20px;
+            right: 20px;
+            border: 2px solid #FFFFFF;
+            color: #FFFFFF;
+
+        }
+
+        #rulebtn {
+            right: 160px;
+        }
+
+        #player span {
+            position: fixed;
+            top: 33.5vh;
+            left: 38vw;
+            background: transparent;
+            color: #FFFFFF
+        }
+
+        #pc span {
+            position: fixed;
+            top: 33.5vh;
+            left: 62vw;
+            background: transparent;
+            color: #FFFFFF;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <div id="scorecard">
+        <div class="textContent">
+            <h1 class="content">ROCK</h1>
+            <h1 class="content">PAPER</h1>
+            <h1 class="content">SCISSORS</h1>
+        </div>
+        <div class="scoreContent">
+            <section class="opponentScore">
+                <p>COMPUTER</p>
+                <p>SCORE</p>
+                <h1 id="pcscore" class="score">0</h1>
+            </section>
+            <section class="yourScore">
+                <p>YOUR</p>
+                <p>SCORE</p>
+                <h1 id="yourscore" class="score">0</h1>
+            </section>
+        </div>
+    </div>
+
+    <div>
+        <div class="outter">
+            <div class="middle">
+                <div class="inner">
+                    <div id="player">
+                        <span>YOU PICKED</span>
+                        <button class="icon rock"><img src="./image/icons8-fist-67 1.png"
+                                style="height: 50px; background-color: white;"></button>
+                        <button class="icon scissors"><img src="./image/17911 1.png"
+                                style="height: 50px; background-color: white;"></button>
+                        <button class="icon paper"><img src="./image/icons8-hand-64.png"
+                                style="height: 50px; background-color: white;"></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <span id="decision" style="font-size: 30px; color: #FFFFFF;">YOU WIN</span><br>
+        <span id="against" style="font-size: 20px; color: #FFFFFF;">AGAINST PC</span>
+
+        <button id="playAgain" onclick="navigateToIndex()">PLAY AGAIN</button>
+
+        <div id="pc">
+            <span>PC PICKED</span>
+            <button class="icon rock"><img src="./image/icons8-fist-67 1.png"
+                    style="height: 50px; background-color: white;"></button>
+            <button class="icon scissors"><img src="./image/17911 1.png"
+                    style="height: 50px; background-color: white;"></button>
+            <button class="icon paper"><img src="./image/icons8-hand-64.png"
+                    style="height: 50px; background-color: white;"></button>
+        </div>
+    </div>
+
+
+
+
+    <div id="game-rules-box">
+        <button onclick="hide()" class="cross-icon">
+            <h1>X</h1>
+        </button>
+        <h2>Game Rules</h2>
+        <ul>
+            <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+            <li>Agree ahead of time whether you'll count off "rock, paper, scissors, shoot" or just "rock, paper,
+                scissors."</li>
+            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</li>
+            <li>If both players lay down the same hand, each player lays down another hand.</li>
+        </ul>
+    </div>
+    <button id="rulebtn" onclick="show()">RULES</button>
+    <button id="nextBtn" onclick="winning()">NEXT</button>
+</body>
+
+</html>

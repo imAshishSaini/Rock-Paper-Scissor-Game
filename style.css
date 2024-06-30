@@ -1,0 +1,278 @@
+* {
+    background-color: rgb(142, 237, 83);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* height: 100vh; */
+}
+
+/* *{
+    background-color: rgb(142, 237, 83);
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+} */
+
+#scorecard {
+    margin-top: 5vh;
+    margin-left: 20vw;
+    width: 60vw;
+    height: 20vh;
+    border-radius: 13px;
+    border: 2px solid #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+}
+
+.textContent {
+    margin: 1vh;
+    margin-left: 1vw;
+    height: 18vh;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.content {
+    font-size: 5vh;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.scoreContent {
+    margin-right: 1vw;
+    margin-top: 1vh;
+    justify-content: space-around;
+}
+
+.opponentScore {
+    width: 7vw;
+    height: 18vh;
+    border-radius: 9px;
+    display: inline-block;
+    background: #FFFFFF;
+
+}
+
+.yourScore {
+    width: 7vw;
+    height: 18vh;
+    border-radius: 9px;
+    display: inline-block;
+    background: #FFFFFF;
+
+}
+
+p {
+    font-size: 2.5vh;
+    margin: 3px;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.scoreContent h1 {
+    font-size: 7vh;
+    display: inline-block;
+    margin-left: 40%;
+    background-color: #FFFFFF;
+
+}
+
+.icon {
+    border-radius: 50%;
+    background-color: white;
+}
+
+.rock {
+    position: fixed;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    left: 36vw;
+    top: 43vh;
+    border: 7px solid #0074B6;
+}
+
+.scissors {
+    position: fixed;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    left: 55.3vw;
+    top: 43vh;
+    border: 7px solid #BD00FF;
+}
+
+.paper {
+    position: fixed;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    left: 45.8vw;
+    top: 73vh;
+    border: 7px solid #FFA943;
+}
+
+.line1 {
+    position: fixed;
+    width: 12.2vw;
+    top: 49.5vh;
+    left: 42.5vw;
+    border: 5px solid black;
+    /* 
+    width: 20px;
+    height: 50px;
+    border: 2px solid black; */
+}
+
+.line2 {
+    position: fixed;
+    width: 22vh;
+    top: 65.6vh;
+    left: 38.4vw;
+    border: 5px solid black;
+    transform: rotate(58deg);
+
+}
+
+.line3 {
+    position: fixed;
+    width: 22vh;
+    top: 65.8vh;
+    left: 49.2vw;
+    border: 5px solid black;
+    transform: rotate(-58deg);
+
+}
+
+
+
+
+
+
+
+#game-rules-box {
+    background-color: #0d4d34;
+    border: 7px solid #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    position: fixed;
+    bottom: 80px;
+    right: 40px;
+    color: #fff;
+    display: none;
+}
+
+#game-rules-box h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    background-color: #0d4d34;
+}
+
+#game-rules-box ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #0d4d34;
+
+}
+
+#game-rules-box ul li {
+    display: flex;
+    align-items: start;
+    margin-bottom: 10px;
+    background-color: #0d4d34;
+
+}
+
+#game-rules-box ul li::before {
+    content: '■';
+    color: #ffcc00;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.cross-icon {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 5px solid #fff;
+}
+
+.cross-icon h1 {
+    background-color: #ff0000;
+}
+
+.cross {
+    background-color: #ff0000;
+}
+
+#rulebtn {
+    width: 119px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    position: fixed;
+    cursor: pointer;
+    bottom: 20px;
+    right: 20px;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+
+}
+
+.trophy {
+    position: fixed;
+    top: 23vh;
+    left: 44vw;
+}
+
+.win {
+    position: fixed;
+    top: 10vh;
+    left: 34vw;
+}
+
+.winner h1 {
+    position: fixed;
+    top: 56vh;
+    left: 39vw;
+    font-size: 80px;
+    color: #FFFFFF;
+}
+
+.winner h2 {
+    position: fixed;
+    top: 70vh;
+    left: 38vw;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+#playAgain {
+    position: fixed;
+    top: 82vh;
+    left: 45vw;
+    background-color: #FFFFFF;
+    width: 174px;
+    height: 44px;
+    border-radius: 9px;
+    border: 0px;
+    font-size: 18px;
+}
